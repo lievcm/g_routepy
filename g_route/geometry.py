@@ -1,5 +1,5 @@
 """
-Port of the free geometry functions shared by GridObstacles.cpp and
+Port of the free geometry functions used by
 RoutingGrid.cpp (point_in_polygon / offset_polygon / rasterise_polygon).
 
 Speed notes

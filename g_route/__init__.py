@@ -9,7 +9,6 @@ routing grid, occupancy-grid bookkeeping).
 from .types import Node, NodeSet, Port, Net, RouteStrat
 from .routing_config import RoutingConfig
 from .routing_grid import RoutingGrid, OccupancyGrid
-from .grid_obstacles import GridObstacles
 from .astar_router import AStarRouter
 from .net_router import NetRouter
 from .gds_router import GDSRouter, GridBounds, compute_grid_bounds, compute_grid_bounds_from_nets
@@ -20,7 +19,6 @@ __all__ = [
     "Node", "NodeSet", "Port", "Net", "RouteStrat",
     "RoutingConfig",
     "RoutingGrid", "OccupancyGrid",
-    "GridObstacles",
     "AStarRouter",
     "NetRouter",
     "GDSRouter", "GridBounds", "compute_grid_bounds", "compute_grid_bounds_from_nets",

@@ -146,13 +146,6 @@ path = astar.route(start=(0, 0, 0), end=(20, 20, 1))  # Node = (col, row, layer_
 `GDSRouter.route()` calls internally — use it directly if you're managing
 the `RoutingGrid`/obstacles yourself instead of going through `GDSRouter`.
 
-### `GridObstacles`
-A **standalone**, alternate obstacle/port-reservation tracker (NumPy-backed
-boolean grids per layer). It is *not* wired into `GDSRouter`/`NetRouter` —
-those use `RoutingGrid`'s own built-in occupancy grids. Only reach for
-`GridObstacles` if you're building a custom routing pipeline that wants a
-separate obstacle-tracking layer.
-
 ## RoutingConfig JSON schema
 
 ```json
@@ -273,7 +266,6 @@ layout.write("data_bus.gds")
 |---|---|---|
 | `RoutingConfig` | `routing_config.py` | Layer stack + via costs/sizes from JSON |
 | `RoutingGrid` | `routing_grid.py` | Manhattan grid: occupancy, port reservation, coord mapping |
-| `GridObstacles` | `grid_obstacles.py` | Standalone (unused-by-default) obstacle tracker |
 | `AStarRouter` | `astar_router.py` | Multi-source A\* over the grid |
 | `NetRouter` | `net_router.py` | Per-net MST edge ordering + A\* + GDS write |
 | `GDSRouter` | `gds_router.py` | Top-level: grid + obstacles + nets + `route()` |
